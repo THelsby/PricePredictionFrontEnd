@@ -1,0 +1,10 @@
+<h1>ENTER DATA FOR PREDICTION</h1>
+
+<div>
+    <form action="{% url 'housePrediction:estimate' %}" method="post">
+    {% csrf_token %}
+        <label for="quality">Overall Quality: </label>
+        <input id="quality" type="text" name="qualityId" value="{{ currentQuality }}">
+        <input type="submit" value="OK">
+    </form>
+</div>
